@@ -35,6 +35,14 @@
       <p><%= e.comment %></p>
       <p>by <%= e.user.userName %></p>
       <% }) %>
+      <form
+          class="col-1"
+          action="/post/likePost/<%= post.id %>?_method=PUT"
+          method="POST"
+        >
+          <button class="btn btn-primary fa fa-heart" type="submit"></button>
+        </form>
+        <h3 class="col-3">Likes: <%= post.likes %></h3>
     </div>
     <% } %>
     <div>
