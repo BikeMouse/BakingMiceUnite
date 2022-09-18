@@ -1,7 +1,11 @@
 const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema({
-  title: {
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+  recipename: {
     type: String,
     required: true,
   },
@@ -13,17 +17,13 @@ const PostSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  caption: {
+  procedure: {
     type: String,
     required: true,
   },
   likes: {
     type: Number,
     required: true,
-  },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
   },
   createdAt: {
     type: Date,
