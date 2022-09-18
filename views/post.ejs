@@ -3,7 +3,7 @@
   <div class="row justify-content-center mt-5">
     <div class="col-6">
       <h2><%= post.recipename %></h2>
-      <p>by <%= user.userName %></p>
+      <p>by <%= post.user.userName %></p>
       <img class="img-fluid" src="<%= post.image%>" />
       <div class="row justify-content-between">
         <form
@@ -33,6 +33,7 @@
     <div>
       <% comments.forEach((e)=>{ %>
       <p><%= e.comment %></p>
+      <p>by <%= e.user.userName %></p>
       <% }) %>
     </div>
     <% } %>
