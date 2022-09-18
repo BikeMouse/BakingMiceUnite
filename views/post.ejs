@@ -2,8 +2,10 @@
 <div class="container">
   <div class="row justify-content-center mt-5">
     <div class="col-6">
-      <h2><%= post.title %></h2>
+      <h2><%= post.recipename %></h2>
+      <p>by <%= user.userName %></p>
       <img class="img-fluid" src="<%= post.image%>" />
+      <p><%= post.procedure %></p>
       <div class="row justify-content-between">
         <form
           class="col-1"
