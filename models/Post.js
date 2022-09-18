@@ -17,6 +17,10 @@ const PostSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  ingredients: {
+    type: String,
+    required: true,
+  },
   procedure: {
     type: String,
     required: true,

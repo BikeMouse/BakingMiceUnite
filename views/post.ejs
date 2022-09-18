@@ -5,7 +5,6 @@
       <h2><%= post.recipename %></h2>
       <p>by <%= user.userName %></p>
       <img class="img-fluid" src="<%= post.image%>" />
-      <p><%= post.procedure %></p>
       <div class="row justify-content-between">
         <form
           class="col-1"
@@ -27,7 +26,8 @@
       </div>
     </div>
     <div class="col-3 mt-5">
-      <p><%= post.caption %></p>
+      <p><%= post.ingredients %></p>
+      <p><%= post.procedure %></p>
     </div>
     <% if (comments.length > 0) { %>
     <div>

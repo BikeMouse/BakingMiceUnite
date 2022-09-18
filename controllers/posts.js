@@ -37,6 +37,7 @@ module.exports = {
         recipename: req.body.recipename,
         image: result.secure_url,
         cloudinaryId: result.public_id,
+        ingredients: req.body.ingredients,
         procedure: req.body.procedure,
         likes: 0,
         user: req.user.id,
