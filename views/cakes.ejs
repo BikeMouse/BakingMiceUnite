@@ -3,11 +3,11 @@
   <div class="row mt-5">
       <div class="col-6">
         <ul class="row list-unstyled">
-            <% posts.forEach((e)=>{ %>
-                <% if (e == 'Cakes and Baked Goods') { %>
+            <% post.forEach((e)=>{ %>
+                <% if (e.category == 'Cakes and Baked Goods') { %>
                     <li class="col-6 justify-content-between mt-5">
-                    <a href="/post/<%= posts._id%>">
-                    <img class="img-fluid" src="<%= posts.image%>">
+                    <a href="/post/<%= e._id%>">
+                    <img class="img-fluid" src="<%= e.image%>">
                     </a>
                     </li>
                 <% } %>

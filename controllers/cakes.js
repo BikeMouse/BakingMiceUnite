@@ -22,7 +22,7 @@ module.exports = {
   },
   getPost: async (req, res) => {
     try {
-      const post = await Post.findById(req.user.id).populate("user", "userName");
+      const post = await Post.find({user:req.user.id}).populate("user", "userName");
       const comments = await Comment.find({ post: req.params.id }).populate('user','userName');
       res.render("cakes.ejs", { post: post, user: req.user, comments: comments });
     } catch (err) {
