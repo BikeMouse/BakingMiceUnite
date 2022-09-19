@@ -1,0 +1,24 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+        <ul class="row list-unstyled">
+            <% post.forEach((e)=>{ %>
+                <% if (e.category == 'Breakfasts') { %>
+                    <li class="col-6 justify-content-between mt-5">
+                    <a href="/post/<%= e._id%>">
+                    <img class="img-fluid" src="<%= e.image%>">
+                    </a>
+                    </li>
+                <% } %>
+            <% } )%>
+        </ul>
+        <div class="col-6 mt-5">
+          <a class="btn btn-primary" href="/profile">Return to Profile</a>
+          <a class="btn btn-primary" href="/feed">Return to Feed</a>
+        </div> 
+      </div>  
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') -%>
