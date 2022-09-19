@@ -6,6 +6,7 @@
             <% post.forEach((e)=>{ %>
                 <% if (e.category == 'Sauces') { %>
                     <li class="col-6 justify-content-between mt-5">
+                    <h3><%= e.recipename %></h3>
                     <a href="/post/<%= e._id%>">
                     <img class="img-fluid" src="<%= e.image%>">
                     </a>
