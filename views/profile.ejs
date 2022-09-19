@@ -11,9 +11,13 @@
             <h2>Add a recipe</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
-                  <label for="title" class="form-label">Recipe name</label>
+                  <label for="recipename" class="form-label">Recipe name</label>
                   <input type="text" class="form-control" id="recipename" name="recipename">
               </div>
+              <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <input type="text" class="form-control" id="category" name="category">
+            </div>
               <div class="mb-3">
                 <label for="ingredients" class="form-label">Ingedients</label>
                 <textarea class="form-control" id="ingredients" name="ingredients"></textarea>
@@ -30,6 +34,26 @@
             </form>
           </div>
       </div>
+      <div>
+        <section class ="categories">
+          <a href="/cakes"><h3>Cakes and Baked Goods</h3></a>
+          <h3>Breads and Breadlikes</h3>
+          <h3>Breakfasts</h3>
+          <h3>Desserts</h3>
+          <h3>Sauces</h3>
+          <h3>Soups/Stews</h3>
+          <h3>Casseroles and Pasta Bakes</h3>
+          <h3>Salads</h3>
+          <h3>Filled Rolls and Sandwiches</h3>
+          <h3>Stir Frys</h3>
+          <h3>Vegetables</h3>
+          <h3>Vegetarian and Vegan</h3>
+          <h3>Fish and Seafood</h3>
+          <h3>Meats</h3>
+          <h3>Pasta Dishes</h3>
+          <h3>Misc</h3>
+        </section>
+      </div>
       <div class="col-6">
         <ul class="row list-unstyled">
         <% for(let i = 0; i < posts.length; i++) {%>
@@ -41,7 +65,7 @@
         <% } %>
         </ul>
         <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
+          <a class="btn btn-primary" href="/feed">Go to Feed</a>
         </div>  
       </div>  
     </div>
