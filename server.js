@@ -12,6 +12,7 @@ const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
 const commentRoutes = require('./routes/comments');
 const cakesRoutes = require('./routes/cakes');
+const breadsRoutes = require('./routes/breads');
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -60,6 +61,7 @@ app.use("/", mainRoutes);
 app.use("/post", postRoutes);
 app.use('/comment',commentRoutes);
 app.use('/cakes',cakesRoutes);
+app.use('/breads',breadsRoutes);
 
 //Server Running
 app.listen(process.env.PORT, () => {
