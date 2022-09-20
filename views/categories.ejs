@@ -4,7 +4,6 @@
       <div class="col-6">
         <ul class="row list-unstyled">
             <% post.forEach((e)=>{ %>
-                <% if (e.category == 'Cakes and Baked Goods') { %>
                     <li class="col-6 justify-content-between mt-5">
                     <h3><%= e.recipename %></h3>
                     <a href="/post/<%= e._id%>">
@@ -15,7 +14,6 @@
                     <p><strong>Procedure</strong></p>
                     <p><%= e.procedure %></p>
                     </li>
-                <% } %>
             <% } )%>
         </ul>
         <div class="col-6 mt-5">
