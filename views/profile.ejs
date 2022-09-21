@@ -1,20 +1,23 @@
 <%- include('partials/header') -%>
 <div class="container">
   <div class="row mt-5">
-      <div class="col-6">
+      <div class="col-4">
           <div>
+            <div class="row justify-content-center m-3">
+              <h2>Your details</h2>
               <p><strong>User Name</strong>: <%= user.userName %></p>
               <p><strong>Email</strong>: <%= user.email %></p>
+            </div>
               <a href="/logout" class="col-3 btn btn-primary">Logout</a>
           </div>
           <div class="mt-5">
             <h2>Add a recipe</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3">
+              <div class="me-3">
                   <label for="recipename" class="form-label">Recipe name</label>
                   <input type="text" class="form-control" id="recipename" name="recipename">
               </div>
-              <div class="mb-3">
+              <div class="my-3">
                 <label for="category" class="form-label">Category</label>
                 <select name="category" id="category">
                   <option value="Cakes and Baked Goods" selected>Cakes and Baked Goods</option>
@@ -35,88 +38,96 @@
                   <option value="Misc">Misc</option>
                 </select>
             </div>
-              <div class="mb-3">
+              <div class="me-3">
                 <label for="ingredients" class="form-label">Ingedients</label>
                 <textarea class="form-control" id="ingredients" name="ingredients"></textarea>
               </div>
-              <div class="mb-3">
+              <div class="me-3">
                 <label for="procedure" class="form-label">Procedure</label>
                 <textarea class="form-control" id="procedure" name="procedure"></textarea>
               </div>
-              <div class="mb-3">
+              <div class="me-3">
                 <label for="imgUpload" class="form-label">Image</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
               </div>
-              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+              <div class="mt-3">
+                <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+              </div>
             </form>
           </div>
       </div>
-      <div class="col-6">
-        <section class ="categories">
-          <h3>Recipe Categories</h3>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Cakes and Baked Goods">Go to Cakes and Bakes Goods</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Breads and Breadlikes">Go to Breads and Breadlikes</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Breakfasts">Go to Breakfasts</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Desserts">Go to Desserts</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Sauces">Go to Sauces</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Soups and Stews">Go to Soups and Stews</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Casseroles and Pasta Bakes">Go to Casseroles and Pasta Bakes</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Salads">Go to Salads</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Filled Rolls and Sandwiches">Go to Filled Rolls and Sandwiches</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Stir Frys">Go to Stir Frys</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Vegetables">Go to Vegetables</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Vegetarian and Vegan">Go to Vegetarian and Vegan</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Fish and Seafood">Go to Fish and Seafood</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Meats">Go to Meats</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Pasta Dishes">Go to Pasta Dishes</a>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/categories/Misc">Go to Misc</a>
-          </div>
-        </section>
-      </div>
-      <div class="col-6">
+      <div class="col-4">
+        <div class="row justify-content-center m-3">
+          <h2>All your uploaded recipes</h2>
+        </div>
+        <div class="row justify-content-center m-3">
+          <a class="btn btn-primary" href="/feed">Go to Feed</a>
+        </div>  
         <ul class="row list-unstyled">
         <% for(let i = 0; i < posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
+              <p><%= posts[i].recipename%></p>
               <img class="img-fluid" src="<%= posts[i].image%>">
             </a>
           </li>
         <% } %>
         </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Go to Feed</a>
-        </div>  
+      </div>
+      <div class="col-4">
+        <section class ="categories">
+          <div class="row justify-content-center m-3">
+            <h2>Recipe Categories</h2>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Cakes and Baked Goods">Go to Cakes and Bakes Goods</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Breads and Breadlikes">Go to Breads and Breadlikes</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Breakfasts">Go to Breakfasts</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Desserts">Go to Desserts</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Sauces">Go to Sauces</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Soups and Stews">Go to Soups and Stews</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Casseroles and Pasta Bakes">Go to Casseroles and Pasta Bakes</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Salads">Go to Salads</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Filled Rolls and Sandwiches">Go to Filled Rolls and Sandwiches</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Stir Frys">Go to Stir Frys</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Vegetables">Go to Vegetables</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Vegetarian and Vegan">Go to Vegetarian and Vegan</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Fish and Seafood">Go to Fish and Seafood</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Meats">Go to Meats</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Pasta Dishes">Go to Pasta Dishes</a>
+          </div>
+          <div class="row justify-content-center m-3">
+            <a class="btn btn-primary" href="/categories/Misc">Go to Misc</a>
+          </div>
+        </section>
       </div>  
     </div>
   </div>
