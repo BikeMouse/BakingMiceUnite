@@ -2,19 +2,19 @@
 <div class="container">
   <div class="row me-5">
       <div class="col-6">
-        <ul class="row list-unstyled">
+        <ul class="row list-unstyled mt-5">
             <% post.forEach((e)=>{ %>
                     <li class="col-6 justify-content-between mt-5">
-                    <h3><%= e.recipename %></h3>
+                    <h3 class="text-white"><%= e.recipename %></h3>
                     <a href="/post/<%= e._id%>">
                     <img class="img-fluid" src="<%= e.image%>">
                     </a>
-                    <p class="col-6 justify-content-between mt-3"><strong>Ingredients</strong></p>
-                    <p class="col-6 justify-content-between mt-3"><%= e.ingredients %></p>
+                    <p class="col-6 justify-content-between mt-3 text-white"><strong>Ingredients</strong></p>
+                    <p class="col-6 justify-content-between mt-3 text-white"><%= e.ingredients %></p>
                     </li>
             <% } )%>
         </ul>
-        <div class="col-6 mt-5">
+        <div class="col-6 me-5 mt-5">
           <a class="btn btn-primary" href="/profile">Return to Profile</a>
           <a class="btn btn-primary" href="/feed">Return to Feed</a>
         </div> 
