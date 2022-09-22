@@ -31,3 +31,11 @@
     background-color: rgba(97, 6, 244);
     color: white;
 }
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #195418cc;
+}
