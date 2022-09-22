@@ -1,0 +1,33 @@
+.body {
+    background-color: rgba(97, 6, 244);
+}
+
+.title a{
+    color: rgba(216, 227, 253, 0.8);
+    font-size: 4rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.underTitle {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#details{
+    background-color: rgba(139, 167, 230);
+}
+
+#userFeed{
+    background-color: rgba(139, 167, 230);
+}
+
+#categories{
+    background-color: rgba(139, 167, 230);
+}
+
+.footer {
+    background-color: rgba(97, 6, 244);
+    color: white;
+}
