@@ -4,14 +4,16 @@
       <div class="row justify-content-center col-4" id="details">
           <div>
             <div class="row justify-content-center my-3">
-              <h2>Your details</h2>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
-              <p><strong>Email</strong>: <%= user.email %></p>
+              <h2 class="headings">Your details</h2>
+              <p><strong>User Name</strong>:</p>
+              <p class="label"><%= user.userName %></p>
+              <p><strong>Email</strong>:</p>
+              <p class="label"><%= user.email %></p>
             </div>
               <a href="/logout" class="col-3 btn btn-primary">Logout</a>
           </div>
           <div class="mt-5">
-            <h2>Add a recipe</h2>
+            <h2 class="headings">Add a recipe</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="me-3">
                   <label for="recipename" class="form-label">Recipe name</label>
@@ -58,7 +60,7 @@
       </div>
       <div class="col-4" id="userFeed">
         <div class="row justify-content-center m-3">
-          <h2>All your uploaded recipes</h2>
+          <h2 class="headings">All your uploaded recipes</h2>
         </div>
         <div class="row justify-content-center m-3">
           <a class="btn btn-primary" href="/feed">Go to Feed</a>
@@ -77,7 +79,7 @@
       <div class="col-4" id="categories">
         <section class ="categories">
           <div class="row justify-content-center m-3">
-            <h2>Recipe Categories</h2>
+            <h2 class="headings">Recipe Categories</h2>
             <div class="row justify-content-evenly m-3 w-auto">
                <a class="btn btn-primary" href="/categories/Cakes and Baked Goods">Cakes and Bakes Goods</a>
             </div>

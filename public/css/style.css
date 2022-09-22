@@ -41,3 +41,13 @@ a {
 .btn {
     background-color: #195418cc;
 }
+
+.headings {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.label {
+    font-weight: 600;
+    color: rgba(159, 3, 197, 0.8);
+}
