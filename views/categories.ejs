@@ -1,6 +1,6 @@
 <%- include('partials/header') -%>
 <div class="container">
-  <div class="row mt-5">
+  <div class="row me-5">
       <div class="col-6">
         <ul class="row list-unstyled">
             <% post.forEach((e)=>{ %>
@@ -9,10 +9,8 @@
                     <a href="/post/<%= e._id%>">
                     <img class="img-fluid" src="<%= e.image%>">
                     </a>
-                    <p><strong>Ingredients</strong></p>
-                    <p><%= e.ingredients %></p>
-                    <p><strong>Procedure</strong></p>
-                    <p><%= e.procedure %></p>
+                    <p class="col-6 justify-content-between mt-3"><strong>Ingredients</strong></p>
+                    <p class="col-6 justify-content-between mt-3"><%= e.ingredients %></p>
                     </li>
             <% } )%>
         </ul>
