@@ -6,11 +6,12 @@
       </div> 
       <ul class="row list-unstyled">
         <% for(let i = 0; i < posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <h3><%= posts[i].recipename %></h3>
+          <li class="col-4 justify-content-between mt-5">
+            <h3 class="mt-5 text-white"><%= posts[i].recipename %></h3>
             <a href="/post/<%= posts[i]._id%>">
               <img class="img-fluid" src="<%= posts[i].image%>">
             </a>
+            <p class="mt-5 text-white"><%= posts[i].ingredients %></p>
           </li>
         <% } %>
         </ul>
