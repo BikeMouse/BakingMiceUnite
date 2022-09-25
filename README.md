@@ -9,7 +9,9 @@ The app is structured in a way, that the user uploads their recipes to a categor
 ### How It Is Done
 Techs used: HTML5, CSS3, JavaScript, Node.js, Express.js, EJS, MongoDB/Mongoose, Passport and Bootstrap.
 
-The first step that has been taken was to set up the Database - MongoDB and using Mongoose for Schemas. Working on the backend was put under the guideline of MVC - Model, View, Controller and implementing Routes.
+The first step to get this application running, is to open the command line in the folder of the app and type in following command : npm install.
+
+The second step that is required it to set up the Database - MongoDB and using Mongoose for Schemas. Working on the backend was put under the guideline of MVC - Model, View, Controller and implementing Routes.
 
 ### Lessons Learned
 This project is still under development
