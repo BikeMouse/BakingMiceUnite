@@ -1,6 +1,6 @@
 <%- include('partials/header') -%>
 <div class="container">
-  <div class="row justify-content-center mt-5">
+  <div class="row justify-content-center mt-5 text-white">
     <div class="col-6">
       <h2><%= post.recipename %></h2>
       <h5><%= post.category %></h5>
@@ -46,13 +46,13 @@
         <h3 class="col-3">Likes: <%= post.likes %></h3>
     </div>
     <% } %>
-    <div>
+    <div class="row justify-content-center mt-5">
       <form action="/comment/createComment/<%= post.id %>" method="POST">
-        <div class="mb-3">
-            <label for="comment" class="form-label">Comment</label>
-            <input type="text" class="form-control" id="comment" name="comment">
+        <div class="justify-content-center mb-3">
+            <label for="comment" class="form-label m-3">Comment</label>
+            <input type="text" class="form-control m-3 w-50" id="comment" name="comment">
         </div>
-        <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+        <button type="submit" class="btn btn-primary m-3" value="Upload">Submit</button>
       </form>
     </div>
     <div class="col-6 mt-5">
