@@ -1,5 +1,9 @@
 # BakingMiceUnite
-under development
+While this project is still under development, following steps need to be considered to run the app:
+
+- Run the command 'npm install'
+- Set up your database and connect it with the app
+- Use localhost:5000
 
 ### About Baking Mice Unite
 This is a fullstack application- a social media style online recipe book where the user can log in and post,read, edit and delete all their recipes as well as looking at other users recipes.
