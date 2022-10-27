@@ -36,7 +36,7 @@
               </p>
               <form action="/comment/createComment/<%= post.id %>" method="POST">
                 <div class="justify-content-center me-3">
-                  <label for="comment" class="form-label me-3">Comment</label>
+                  <label for="comment" class="form-label mt-3 me-3 fw-bold">Comment</label>
                   <input type="text" class="form-control me-3 w-50" id="comment" name="comment">
                 </div>
                 <button type="submit" class="btn btn-primary fw-bold me-3 mt-3" value="Upload">Submit</button>
@@ -44,7 +44,7 @@
               <% if (comments.length> 0) { %>
                 <div class="card-text me-3">
                   <% comments.forEach((e)=>{ %>
-                    <p class="card-text me-3 mt-3">
+                    <p class="card-text me-3 mt-3 fw-bold">
                       <%= e.comment %>
                     </p>
                     <p class="card-text">by <%= e.user.userName %>
