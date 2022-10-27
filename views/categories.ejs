@@ -4,14 +4,15 @@
       <div class="col-6">
         <ul class="row list-unstyled mt-5">
             <% post.forEach((e)=>{ %>
-                    <li class="col-6 justify-content-between mt-5">
-                    <h3 class="text-white"><%= e.recipename %></h3>
-                    <a href="/post/<%= e._id%>">
-                    <img class="img-fluid" src="<%= e.image%>">
-                    </a>
-                    <p class="col-6 justify-content-between mt-3 text-white"><strong>Ingredients</strong></p>
-                    <p class="col-6 justify-content-between mt-3 text-white"><%= e.ingredients %></p>
-                    </li>
+              <div class="card" style="width: 18rem;">
+                <img src="<%= e.image%>" class="card-img-top" alt="recipe">
+                <div class="card-body">
+                  <h3 class="card-text"><%= e.recipename %></h3>
+                  <a href="/post/<%= e._id%>">
+                  <p class="card-text">Ingredients</p>
+                  <p class="card-text"><%= e.ingredients %></p>
+                </div>
+              </div>
             <% } )%>
         </ul>
         <div class="col-6 me-5 mt-5">
