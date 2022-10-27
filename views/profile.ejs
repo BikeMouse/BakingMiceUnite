@@ -3,7 +3,7 @@
     <div class="row mt-5">
       <div class="row justify-content-center col-4">
         <div class="card">
-          <div class="card" style="width: 18rem;">
+          <div class="card mt-5 ms-3" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title"><strong>Your details</strong></h5>
               <p class="card-text"><strong>User Name</strong>:</p>
@@ -14,10 +14,10 @@
               <p class="card-text">
                 <%= user.email %>
               </p>
-              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+              <a href="/logout" class="col-3 btn btn-primary w-auto fw-bold">Logout</a>
             </div>
           </div>
-          <div class="card" style="width: 18rem;">
+          <div class="card mt-5 ms-3" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title"><strong>Add a recipe</strong></h5>
               <form action="/post/createPost" enctype="multipart/form-data" method="POST">
@@ -60,20 +60,20 @@
                   <input type="file" class="form-control" id="imageUpload" name="file">
                 </div>
                 <div class="mt-3">
-                  <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+                  <button type="submit" class="btn btn-primary fw-bold" value="Upload">Submit</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem;">
-        <div class="card-header"><strong>
+      <div class="card ms-5 me-5" style="width: 18rem;">
+        <div class="card-header mt-5 ms-3 me-3"><strong>
             All your recipes
           </strong>
         </div>
         <div class="row justify-content-center m-3 w-auto">
-          <a class="btn btn-primary" href="/feed">Go to Feed</a>
+          <a class="btn btn-primary fw-bold" href="/feed">Go to Feed</a>
         </div>
         <ul class="list-group list-group-flush">
           <% for(let i=0; i < posts.length; i++) {%>
@@ -88,95 +88,95 @@
             <% } %>
         </ul>
       </div>
-      <div class="card" style="width: 18rem;">
-        <div class="card-header"><strong>
+      <div class="card ms-5 me-5" style="width: 18rem;">
+        <div class="card-header mt-5 ms-3 me-3"><strong>
             Recipe Categories
           </strong>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Cakes and Baked Goods">Cakes and Bakes Goods</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Cakes and Baked Goods">Cakes and Bakes Goods</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Breads and Breadlikes">Breads and Breadlikes</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Breads and Breadlikes">Breads and Breadlikes</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Breakfasts">Breakfasts</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Breakfasts">Breakfasts</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Desserts">Desserts</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Desserts">Desserts</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Sauces">Sauces</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Sauces">Sauces</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Soups and Stews">Soups and Stews</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Soups and Stews">Soups and Stews</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Casseroles and Pasta Bakes">Casseroles and Pasta Bakes</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Casseroles and Pasta Bakes">Casseroles and Pasta Bakes</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Salads">Salads</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Salads">Salads</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Filled Rolls and Sandwiches">Filled Rolls and Sandwiches</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Filled Rolls and Sandwiches">Filled Rolls and Sandwiches</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Stir Frys">Stir Frys</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Stir Frys">Stir Frys</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Vegetables">Vegetables</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Vegetables">Vegetables</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Vegetarian and Vegan">Vegetarian and Vegan</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Vegetarian and Vegan">Vegetarian and Vegan</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Fish and Seafood">Fish and Seafood</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Fish and Seafood">Fish and Seafood</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Meats">Meats</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Meats">Meats</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Potatoes">Potatoes</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Potatoes">Potatoes</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Pasta Dishes">Pasta Dishes</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Pasta Dishes">Pasta Dishes</a>
             </div>
           </li>
           <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
-              <a class="btn btn-primary" href="/categories/Misc">Misc</a>
+              <a class="btn btn-primary fw-bold" href="/categories/Misc">Misc</a>
             </div>
           </li>
         </ul>

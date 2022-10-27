@@ -1,22 +1,18 @@
 .body {
-    background-color: rgba(177, 159, 196, 0.8);
+    background-color: #d8f3dc;
 }
 
 .title a{
-    color: #195418cc;
+    color: #081c15;
     font-size: 4rem;
     font-weight: 800;
     text-decoration: none;
 }
 
 .underTitle {
-    color: white;
+    color: #1b4332;
     font-weight: 600;
     font-size: 1rem;
-}
-
-#categories{
-    background-color: rgba(139, 167, 230);
 }
 
 .footer {
@@ -26,15 +22,25 @@
 
 a {
     text-decoration: none;
-    color: black;
+    color: #081c15;
     font-weight: 600;
 }
 
 .btn {
-    background-color: #195418cc;
+    background-color: #40916c;
 }
 
 .headings {
     font-weight: 600;
     font-size: 2.5rem;
+}
+
+.card{
+    background-color: #d8f3dc;
+    border-color: #d8f3dc;
+}
+
+.list-group-item{
+    background-color: #d8f3dc;
+    border-color: #d8f3dc;
 }
