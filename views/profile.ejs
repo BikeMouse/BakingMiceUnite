@@ -6,7 +6,7 @@
           <div class="card mt-5 ms-3" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title"><strong>Your details</strong></h5>
-              <p class="card-text"><strong>User Name</strong>:</p>
+              <p class="card-text mt-3"><strong>User Name</strong>:</p>
               <p class="card-text">
                 <%= user.userName %>
               </p>
@@ -68,7 +68,7 @@
         </div>
       </div>
       <div class="card ms-5 me-5" style="width: 18rem;">
-        <div class="card-header mt-5 ms-3 me-3"><strong>
+        <div class="card-header mt-5 ms-3 me-3 d-flex justify-content-center"><strong>
             All your recipes
           </strong>
         </div>
@@ -77,9 +77,9 @@
         </div>
         <ul class="list-group list-group-flush">
           <% for(let i=0; i < posts.length; i++) {%>
-            <li class="list-group-item">
+            <li class="list-group-item d-flex justify-content-center">
               <a href="/post/<%= posts[i]._id%>">
-                <p>
+                <p class="d-flex justify-content-center">
                   <%= posts[i].recipename%>
                 </p>
                 <img class="img-fluid" src="<%= posts[i].image%>">
@@ -89,7 +89,7 @@
         </ul>
       </div>
       <div class="card ms-5 me-5" style="width: 18rem;">
-        <div class="card-header mt-5 ms-3 me-3"><strong>
+        <div class="card-header mt-5 ms-3 me-3 d-flex justify-content-center"><strong>
             Recipe Categories
           </strong>
         </div>
