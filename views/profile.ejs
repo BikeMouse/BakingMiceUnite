@@ -2,25 +2,21 @@
   <div class="container">
     <div class="row mt-5">
       <div class="row justify-content-center col-4">
-        <div>
-          <div class="row justify-content-center my-3">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title"><strong>Your details</strong></h5>
-                <p class="card-text"><strong>User Name</strong>:</p>
-                <p class="card-text">
-                  <%= user.userName %>
-                </p>
-                <p class="card-text"><strong>Email</strong>:</p>
-                <p class="card-text">
-                  <%= user.email %>
-                </p>
-                <a href="/logout" class="col-3 btn btn-primary">Logout</a>
-              </div>
+        <div class="card">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Your details</strong></h5>
+              <p class="card-text"><strong>User Name</strong>:</p>
+              <p class="card-text">
+                <%= user.userName %>
+              </p>
+              <p class="card-text"><strong>Email</strong>:</p>
+              <p class="card-text">
+                <%= user.email %>
+              </p>
+              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
             </div>
           </div>
-        </div>
-        <div class="mt-5">
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title"><strong>Add a recipe</strong></h5>
@@ -72,81 +68,118 @@
         </div>
       </div>
       <div class="card" style="width: 18rem;">
-        <div class="row justify-content-center m-3">
-          <a class="btn btn-primary" href="/feed">Go to Feed</a>
-        </div>
         <div class="card-header"><strong>
-          All your recipes
-        </strong>
+            All your recipes
+          </strong>
+        </div>
+        <div class="row justify-content-center m-3 w-auto">
+          <a class="btn btn-primary" href="/feed">Go to Feed</a>
         </div>
         <ul class="list-group list-group-flush">
           <% for(let i=0; i < posts.length; i++) {%>
-          <li class="list-group-item">
-            <a href="/post/<%= posts[i]._id%>">
-              <p><%= posts[i].recipename%></p>
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
-          <% } %>
+            <li class="list-group-item">
+              <a href="/post/<%= posts[i]._id%>">
+                <p>
+                  <%= posts[i].recipename%>
+                </p>
+                <img class="img-fluid" src="<%= posts[i].image%>">
+              </a>
+            </li>
+            <% } %>
         </ul>
       </div>
-      <div class="col-4" id="categories">
-        <section class="categories">
-          <div class="row justify-content-center m-3">
-            <h2 class="headings">Recipe Categories</h2>
+      <div class="card" style="width: 18rem;">
+        <div class="card-header"><strong>
+            Recipe Categories
+          </strong>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Cakes and Baked Goods">Cakes and Bakes Goods</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Breads and Breadlikes">Breads and Breadlikes</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Breakfasts">Breakfasts</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Desserts">Desserts</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Sauces">Sauces</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Soups and Stews">Soups and Stews</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Casseroles and Pasta Bakes">Casseroles and Pasta Bakes</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Salads">Salads</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Filled Rolls and Sandwiches">Filled Rolls and Sandwiches</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Stir Frys">Stir Frys</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Vegetables">Vegetables</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Vegetarian and Vegan">Vegetarian and Vegan</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Fish and Seafood">Fish and Seafood</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Meats">Meats</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Potatoes">Potatoes</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Pasta Dishes">Pasta Dishes</a>
             </div>
+          </li>
+          <li class="list-group-item">
             <div class="row justify-content-evenly m-3 w-auto">
               <a class="btn btn-primary" href="/categories/Misc">Misc</a>
             </div>
-          </div>
-        </section>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

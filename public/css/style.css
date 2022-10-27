@@ -1,9 +1,9 @@
 .body {
-    background-color: rgba(97, 6, 244);
+    background-color: rgba(177, 159, 196, 0.8);
 }
 
 .title a{
-    color: rgba(216, 227, 253, 0.8);
+    color: #195418cc;
     font-size: 4rem;
     font-weight: 800;
     text-decoration: none;
