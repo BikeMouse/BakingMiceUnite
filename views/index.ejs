@@ -1,19 +1,25 @@
 <%- include('partials/header') -%>
 
     <main class="container d-flex justify-content-center mt-5">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title fw-bold fs-3">The place to store all your favourite recipes</h5>
-                <p class="card-text mt-5">Just upload everything you need - name, ingredients and procedure along with
-                    an image</p>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="card-header">
+                <h5 class="card-title text-center fw-bold d-flex justify-content-center">The place to store all your favourite recipes</h5>
+                <p class="card-text text-center mt-5 d-flex justify-content-center">"Just upload everything - name, ingredients and procedure along with an image"</p>
+              </div>
+              <div class="col-md-8 mt-5 d-flex justify-content-center position-relative top-0 start-0 ms-5">
+                <img src="/imgs/bakingmice.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="card-footer mt-5">
                 <a href="/login"
-                    class="col-3 btn btn-primary mt-5 text-center w-auto d-flex justify-content-center fw-bold">
-                    Login</a>
+                class="col-3 btn btn-primary text-center w-auto d-flex justify-content-center fw-bold mt-2">
+                Login</a>
                 <a href="/signup"
-                    class="col-3 btn btn-primary mt-5 text-center w-auto d-flex justify-content-center fw-bold">
-                    Signup</a>
+                class="col-3 btn btn-primary text-center w-auto d-flex justify-content-center fw-bold mt-2">
+                Signup</a>
             </div>
-        </div>
+            </div>
+          </div>
     </main>
 
 
