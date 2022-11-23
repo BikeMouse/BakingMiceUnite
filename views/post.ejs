@@ -16,22 +16,17 @@
           <p class="card-text">by <%= post.user.userName %>
           </p>
           <img class="img-fluid" src="<%= post.image%>" />
+          <h3 class="card-text mt-3">Likes: <%= post.likes %></h3>
           <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
-            <button class="btn btn-primary fa fa-heart mt-3" type="submit"></button>
+            <button class="btn btn-primary fa fa-heart" type="submit"></button>
           </form>
-          <h3 class="card-text mt-3">Likes: <%= post.likes %>
-          </h3>
           <%if(post.user.id==user.id){ %>
             <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="col-3">
-              <button class="btn btn-primary fa fa-trash" type="submit"></button>
+              <button class="btn btn-primary fa fa-trash mt-3 position-absolute top-0 end-0" type="submit"></button>
             </form>
             <%}%>
-              <p class="card-text mt-3">
-                <%= post.ingredients %>
-              </p>
-              <p class="card-text mt-3">
-                <%= post.procedure %>
-              </p>
+              <p class="card-text mt-3"><%= post.ingredients %></p>
+              <p class="card-text mt-3"><%= post.procedure %></p>
               <form action="/comment/createComment/<%= post.id %>" method="POST">
                 <div class="justify-content-center me-3">
                   <label for="comment" class="form-label mt-3 me-3 fw-bold">Comment</label>
@@ -48,11 +43,6 @@
                     <p class="card-text">by <%= e.user.userName %>
                     </p>
                     <% }) %>
-                      <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
-                        <button class="btn btn-primary fa fa-heart" type="submit"></button>
-                      </form>
-                      <h3 class="card-text mt-3">Likes: <%= post.likes %>
-                      </h3>
                 </div>
                 <% } %>
         </div>
