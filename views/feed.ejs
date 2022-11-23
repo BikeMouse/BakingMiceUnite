@@ -9,10 +9,10 @@
           <div class="card mt-5 " style="width: 18rem;">
             <img src="<%= posts[i].image%>" class="card-img-top" alt="recipe">
             <div class="card-body">
-              <h3 class="card-text"><%= posts[i].recipename %></h3>
+              <h3 class="card-text fs-1"><%= posts[i].recipename %></h3>
               <a href="/post/<%= posts[i]._id%>">
               <p class="card-text">Ingredients</p>
-              <p class="card-text"><%= posts[i].ingredients %></p></a>
+              <p class="card-text fw-normal"><%= posts[i].ingredients %></p></a>
             </div>
           </div>
         <% } %>

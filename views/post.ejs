@@ -2,14 +2,12 @@
   <div class="container">
     <div class="row justify-content-center mt-5">
       <div class="card w-auto" style="width: 18rem;">
-        <div class="card" style="width: 18rem;">
-          <ul class="list-group list-group-flush">
-            <a class="btn btn-primary mt-3 w-auto fw-bold" href="/profile">Return to Profile</a>
-            <a class="btn btn-primary mt-3 w-auto fw-bold" href="/feed">Return to Feed</a>
-          </ul>
-        </div>
+        <div class="col-6 me-5 mt-5">
+          <a class="btn btn-primary" href="/profile">Return to Profile</a>
+          <a class="btn btn-primary" href="/feed">Return to Feed</a>
+        </div> 
         <div class="card-body">
-          <h5 class="card-title">
+          <h5 class="card-title fs-1">
             <%= post.recipename %>
           </h5>
           <h6 class="card-subtitle mb-2 text-muted">
