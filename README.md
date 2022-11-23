@@ -15,7 +15,8 @@ Techs used: HTML5, CSS3, JavaScript, Node.js, Express.js, EJS, MongoDB/Mongoose,
 
 The first step to get this application running, is to open the command line in the folder of the app and type in following command : npm install.
 
-The second step that is required it to set up the Database - MongoDB and using Mongoose for Schemas. Working on the backend was put under the guideline of MVC - Model, View, Controller and implementing Routes.
+The second step that is required it to set up the Database - MongoDB and using Mongoose for Schemas. Working on the backend was put under the guideline of MVC - Model, View, Controller and implementing Routes. The DB String needs to be used in an env file.
+
 
 ### Lessons Learned
-This project is still under development
+Graphical interface can do with a revamp. In future it would be nice to reactify the frontend. Likes could be limited to once per user/post. Future plans involve the ability to look at other users profiles and send friend requests and therefore the feed giving priority to friends posts showing up first.
