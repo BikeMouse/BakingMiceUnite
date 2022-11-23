@@ -1,6 +1,10 @@
 <%- include('partials/header') -%>
 <div class="container">
   <div class="row me-5">
+    <div class="col-6 me-5 mt-5">
+      <a class="btn btn-primary" href="/profile">Return to Profile</a>
+      <a class="btn btn-primary" href="/feed">Return to Feed</a>
+    </div> 
       <div class="col-6">
         <ul class="row list-unstyled mt-5">
             <% post.forEach((e)=>{ %>
@@ -15,10 +19,6 @@
               </div>
             <% } )%>
         </ul>
-        <div class="col-6 me-5 mt-5">
-          <a class="btn btn-primary" href="/profile">Return to Profile</a>
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
-        </div> 
       </div>  
     </div>
   </div>
