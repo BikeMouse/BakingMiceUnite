@@ -19,4 +19,8 @@ The second step that is required it to set up the Database - MongoDB and using M
 
 
 ### Lessons Learned
-Graphical interface can do with a revamp. In future it would be nice to reactify the frontend. Likes could be limited to once per user/post. Future plans involve the ability to look at other users profiles and send friend requests and therefore the feed giving priority to friends posts showing up first.
+- Graphical interface can do with a revamp. In future it would be nice to reactify the frontend
+- Likes could be limited to once per user/post
+- Future plans involve the ability to look at other users profiles and send friend requests
+- Therefore the feed giving priority to friends posts showing up first
+- Implementation of ability to copy another users recipe and save in your own recipes
