@@ -1,9 +1,9 @@
-# BakingMiceUnite
-This Project can be found here https://baking-mice-unite.onrender.com/
+# Bakebook
+Originally named Baking Mice Unite - the offical name of this project is BAKEBOOK and can be found here https://bakebook.onrender.com
 
 ![Baking Mice Unite](./public/imgs/index.png)
 
-### About Baking Mice Unite
+### About Bakebook
 This is a fullstack application- a social media style online recipe book where the user can log in and post,read and delete all their recipes as well as looking at other users recipes.
 
 The app is structured in a way, that the user uploads their recipes to a category- so at a later stage, they can browse the recipes they have in, let's say, soups and stews.
